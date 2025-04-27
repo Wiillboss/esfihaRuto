@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/estilo_formularios.css">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        Cabeçario do Site
+    </header>
+
+    <form action="form_registro_produto" name="form_registro_produto" id="form_registro_produto">
+        <fieldset>
+            <legend>Entrada de Mercadoria e Valores</legend>
+                <label for=""> Mercado:
+                    <input type="text" name="nome_mercado" id="nome_mercado" placeholder="Nome do Mercado." required>
+                </label>
+                <label for=""> Produto:
+                    <input type="text" name="nome_produto" id="nome_produto" placeholder="Nome do Produto." required>
+                </label>
+                <label for=""> Quantidade:
+                    <input type="number" name="quantidade_produto" id="quantidade_produto" required>
+                </label>
+                <label for=""> Preço:
+                    <input type="number" name="preco_produto" id="preco_produto" placeholder="R$:" required>
+                </label>
+                <label for=""> Valor Total:
+                    <div id="valor_ttl_da_compra"> <span>&#128181;</span></div>
+                </label>
+                <input type="submit" name="btn_registrar_compra" id="btn_registrar_compra" value="Registrar">
+        </fieldset>
+    </form>
+
+    <form action="controle_de_mercadoria" name="controle_de_mercadoria" id="controle_de_mercadoria">
+        <fieldset>
+            <legend>Controle de Mercadoria.</legend>
+                <label for="" > Produto:
+                    <input type="text" name="ctrl_mercadoria_nome_produt" id="ctrl_mercadoria_nome_produt" placeholder="Nome do Produto.">
+                </label>
+                <label for="">Quantidade em estoque:
+                    <span>&#128230</span>
+                </label>
+        </fieldset>
+    </form>
+
+    <form action="valor_produto" name="valor_produto" id="valor_produto">
+        <fieldset>
+            <legend>Valor do Produto:</legend>
+                <label for="">Produto:
+                    <input type="text" name="valor_produ_nome_produ" id="valor_produ_nome_produ" placeholder="Nome do Produto.">             
+                </label>
+                <label for="">Valor Unitário:
+                    <div id="val_uni_produ"><span>&#128181;</span></div>
+                </label>
+                <label for="">Porção:
+                    <input type="number" name="valor_produto_porcao" id="valor_produto_porcao" placeholder="Porção.">
+                </label>
+                <label for="">Valor da Porção:
+                    <div id="val_porcao"><span>&#128181;</span></div>
+                </label>
+        </fieldset>
+    </form>
+<!-- 
+    <script>
+
+        const formulario = document.getElementById('form_registro_produto');
+        const resultado = document.getElementById('valor_ttl_da_compra');
+        let listaProdutos = [];
+        let totalGeradoProduto = 0;
+
+        form.addEventListener('submit', function(event)){
+            even.preventDefailt();
+
+            const mercado = document.getElementById('nome_mercado').value;
+            const produto = document.getElementById('nome_produto').value;
+            const quantidade = parseInt(document.getElementById('quantidade_produto').value);
+            const preco = parseInt(document.getElementById('preco_produto').value);
+
+            const total = quantidade_produto * preco_produto;
+
+            listaProdutos.push({nome_mercado, nome_produto, quantidade_produto, preco_produto, total})
+
+
+        }
+
+    </script>
+ -->
+
+    <footer>
+        <p>&copy; 2025 Willian Santos. Todos os direitos reservados. - &reg; <spam>&#128222 <a href>Contato: 13 99671-3558.</a> </spam></p>
+        <p></p>
+    </footer>
+</body>
+</html>

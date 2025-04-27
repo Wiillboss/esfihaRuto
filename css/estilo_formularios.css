@@ -1,0 +1,22 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+label, #btn_registrar_compra{
+    margin-left: 50px;
+}
+
+fieldset{
+    padding: 9px;
+}
+
+#quantidade_produto, #preco_produto{
+    width: 60px;
+}
+
+div{
+    display: inline;
+}
+
