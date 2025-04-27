@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/estilo_da_pagina.css">
     <link rel="stylesheet" href="css/estilo_formularios.css">
-    <title>Document</title>
+    <title>Administração de Recuros</title>
 </head>
 <body>
     <header>
@@ -27,12 +27,15 @@
                     <input type="number" name="quantidade_produto" id="quantidade_produto" required>
                 </label>
                 <label for=""> Preço:
-                    <input type="number" name="preco_produto" id="preco_produto" placeholder="R$:" required>
+                    <input type="number" name="preco_produto" id="preco_produto" placeholder="R$:" required onkeyup="re_produto()">
                 </label>
-                <label for=""> Valor Total:
-                    <div id="valor_ttl_da_compra"> <span>&#128181;</span></div>
+                <label for=""> Valor Total: R$:
+                    <div id="valor_ttl_da_compra"> <span id="registro_valor_total_produto">&#128181;</span></div>
                 </label>
-                <input type="submit" name="btn_registrar_compra" id="btn_registrar_compra" value="Registrar">
+                <!-- Abaixo foi comentado para fazer a tentativa de no lugar do INPUT do tipo SUBMIT, usar um botão diretamente. -->
+                <!-- <input type="submit" name="btn_registrar_compra" id="btn_registrar_compra" value="Registrar"> -->
+
+                <button onclick="registrar_produto()">Registrar Mercadoria</button>
         </fieldset>
     </form>
 
@@ -40,10 +43,30 @@
         <fieldset>
             <legend>Controle de Mercadoria.</legend>
                 <label for="" > Produto:
-                    <input type="text" name="ctrl_mercadoria_nome_produt" id="ctrl_mercadoria_nome_produt" placeholder="Nome do Produto.">
+                    <input type="text" name="ctrl_mercadoria_nome_produto" id="ctrl_mercadoria_nome_produto" placeholder="Nome do Produto.">
+                     <span id="ctrl_mercadoria_nome_produto"></span>
                 </label>
                 <label for="">Quantidade em estoque:
-                    <span>&#128230</span>
+                    <span id="ctrl_qtdade_estoque">&#128230</span>
+                </label>
+                <label for=""> Valor Total em Estoque: R$: 
+                    <span id="ctrl_vlorTotal_em_estoque">&#128181;</span>
+                </label>
+        </fieldset>
+    </form>
+
+    <!-- O formulário abaixo foi criado para teste, visto que a função onkeyUP, as alterações só funcionam nos campos de SPAM -->
+    <form action="controle_de_mercadoria_spam" name="controle_de_mercadoria_spam" id="controle_de_mercadoria_spam">
+        <fieldset id="form_spam">
+            <legend>Controle de Mercadoria.</legend>
+                <label for="" > Produto:
+                     <span id="ctrl_mercadoria_nome_produto_spam">&#128230</span>
+                </label>
+                <label for="">Quantidade em estoque:
+                    <span id="ctrl_qtdade_estoque_spam">&#128230</span>
+                </label>
+                <label for=""> Valor Total em Estoque: R$: 
+                    <span id="ctrl_vlorTotal_em_estoque_spam">&#128181;</span>
                 </label>
         </fieldset>
     </form>
@@ -66,7 +89,7 @@
         </fieldset>
     </form>
 
-
+    <script src="js/customizacao.js"></script>
 <!-- 
     <script>
 

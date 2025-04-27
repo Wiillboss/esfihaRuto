@@ -20,3 +20,6 @@ div{
     display: inline;
 }
 
+#form_spam{
+    background-color: rgb(207, 203, 203);
+}
