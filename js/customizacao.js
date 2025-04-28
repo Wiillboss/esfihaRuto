@@ -1,11 +1,13 @@
 // Tentativa de fazer o botao funcionar sem fazer o load, segue o codigo abaixo.
+// Tentei com document.getElementById('btn_registrar_compra'); e tambem não deu certo.
+
 const botao = document.querySelector('button');
 
 botao.addEventListener('click', function(event){
     event.preventDefault();
 })
 
-function registro_produto(botao){
+function registrar_produto(botao){
     
     const no_mercado = document.getElementById("nome_mercado").value;
     const no_produto = document.getElementById("nome_produto").value;
@@ -15,7 +17,7 @@ function registro_produto(botao){
     const val_ttl_produto = quant_produto * pre_produto;
     
 
-     document.getElementById("ctrl_mercadoria_nome_produt").innerHTML = no_produto;
+     document.getElementById("ctrl_mercadoria_nome_produt").value = no_produto;
      document.getElementById("ctrl_qtdade_estoque").innerHTML = quant_produto;
      document.getElementById("ctrl_vlorTotal_em_estoque").innerHTML = val_ttl_produto;
 }

@@ -27,7 +27,7 @@
                     <input type="number" name="quantidade_produto" id="quantidade_produto" required>
                 </label>
                 <label for=""> Preço:
-                    <input type="number" name="preco_produto" id="preco_produto" placeholder="R$:" required onkeyup="re_produto()">
+                    <input type="number" name="preco_produto" id="preco_produto" placeholder="R$:">
                 </label>
                 <label for=""> Valor Total: R$:
                     <div id="valor_ttl_da_compra"> <span id="registro_valor_total_produto">&#128181;</span></div>
@@ -35,7 +35,7 @@
                 <!-- Abaixo foi comentado para fazer a tentativa de no lugar do INPUT do tipo SUBMIT, usar um botão diretamente. -->
                 <!-- <input type="submit" name="btn_registrar_compra" id="btn_registrar_compra" value="Registrar"> -->
 
-                <button onclick="registrar_produto()">Registrar Mercadoria</button>
+                <button id="btn_registrar_compra" onclick="registrar_produto()">Registrar Mercadoria</button>
         </fieldset>
     </form>
 
