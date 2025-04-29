@@ -28,6 +28,8 @@
                 </label>
                 <label for=""> Preço:
                     <input type="number" name="preco_produto" id="preco_produto" placeholder="R$:">
+                    <!--A linha abaixo é para ser usada somente quando for usar a função para teste com SPAM                     
+                    <input type="number" name="preco_produto" id="preco_produto" placeholder="R$:" onkeyup="re_produto()"> -->
                 </label>
                 <label for=""> Valor Total: R$:
                     <div id="valor_ttl_da_compra"> <span id="registro_valor_total_produto">&#128181;</span></div>
@@ -43,8 +45,8 @@
         <fieldset>
             <legend>Controle de Mercadoria.</legend>
                 <label for="" > Produto:
-                    <input type="text" name="ctrl_mercadoria_nome_produto" id="ctrl_mercadoria_nome_produto" placeholder="Nome do Produto.">
-                     <span id="ctrl_mercadoria_nome_produto"></span>
+                    <input type="text" name="ctrl_mercadoria_nome_produto" id="ctrl_mercadoria_nome_produto" placeholder="Nome do Produto."> 
+                    <!-- <span id="ctrl_mercadoria_nome_produto"></span> -->
                 </label>
                 <label for="">Quantidade em estoque:
                     <span id="ctrl_qtdade_estoque">&#128230</span>
