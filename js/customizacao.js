@@ -17,11 +17,17 @@ function registrar_produto(botao){
     const val_ttl_produto = quant_produto * pre_produto;
     
 
-     document.getElementById("ctrl_mercadoria_nome_produt").value = no_produto;
+     document.getElementById("ctrl_mercadoria_nome_produto").value = no_produto;
      document.getElementById("ctrl_qtdade_estoque").innerHTML = quant_produto;
      document.getElementById("ctrl_vlorTotal_em_estoque").innerHTML = val_ttl_produto;
+     document.getElementById("registro_valor_total_produto").innerHTML = val_ttl_produto;
 }
 
+/* Teste para ao clicar no input, fazer a conta
+function soma_total_entrada_saida(){
+    document.getElementById("registro_valor_total_produto").innerHTML = val_ttl_produto;
+}
+*/
 
 // Deu certo uando a função onkeyup de acordo com o função abaixo, entretanto as mudanças só funcionam nos locais onde tem SPAM
 /*
