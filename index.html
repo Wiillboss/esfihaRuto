@@ -24,13 +24,14 @@
                     <input type="text" name="nome_produto" id="nome_produto" placeholder="Nome do Produto." required>
                 </label>
                 <!-- O conteúdo abaixo é uma ideia que precisa ser melhor desenvolvida.  -->
+                <!-- Ideias ao cliente
                 <label for="">Pacote
                     <input type="radio" name="radio_pacote" id="radio_pacote">
                 </label>
                 <label for="">Unidade
                     <input type="radio" name="radio_unidade" id="radio_unidade">
-                </label>
-                <label for=""> Quantidade:
+                </label> -->
+                <label for=""> Kg:
                     <input type="number" name="quantidade_produto" id="quantidade_produto" required>
                 </label>
                 <label for=""> Preço:
@@ -48,39 +49,45 @@
         </fieldset>
     </form>
 
-    <form action="estoque_total" name="estoque_total" id="estoque_total">
-        <fieldset>
-            <legend>Estoque Total.</legend>
-            <!--    <label for="" > Produto:
-                    <input type="text" name="nome_prodt_estoque_ttal" id="nome_prodt_estoque_ttal" placeholder="Nome do Produto."> 
-                    <span id="ctrl_mercadoria_nome_produto"></span>
-                </label>
-                <label for="">Quantidade em estoque:
-                    <span id="ctrl_qtdade_estoque">&#128230</span>
-                </label>
-                <label for=""> Valor Total em Estoque: R$: 
-                    <span id="ctrl_vlorTotal_em_estoque">&#128181;</span>
-                </label> -->
-        </fieldset>
-    </form>
-
     <form action="controle_de_mercadoria" name="controle_de_mercadoria" id="controle_de_mercadoria">
         <fieldset>
             <legend>Controle de Mercadoria.</legend>
                 <label for="" > Produto:
-                    <input type="text" name="ctrl_mercadoria_nome_produto" id="ctrl_mercadoria_nome_produto" placeholder="Nome do Produto."> 
-                    <!-- <span id="ctrl_mercadoria_nome_produto"></span> -->
+                    <span id="ctrl_mercadoria_nome_produto">&#128230</span>
+                    <!-- 
+                    <input type="text" name="ctrl_mercadoria_nome_produto" id="ctrl_mercadoria_nome_produto" placeholder="Nome do Produto.">  -->
                 </label>
-                <label for="">Quantidade em estoque:
+                <label for="">Kg. em estoque:
                     <span id="ctrl_qtdade_estoque">&#128230</span>
                 </label>
                 <label for=""> Valor Total em Estoque: R$: 
                     <span id="ctrl_vlorTotal_em_estoque">&#128181;</span>
                 </label>
         </fieldset>
+        <fieldset id="producao">
+            <legend>Produção</legend>
+            <input type="checkbox" class="checkbox_itens" name="farinha" id="id_farinha"> Farinha.
+            <input type="checkbox" class="checkbox_itens" name="oleo" id="id_oleo"> Óleo.
+            <input type="checkbox" class="checkbox_itens" name="acuca" id="id_acuca"> Açucar.
+            <input type="checkbox" class="checkbox_itens" name="sal" id="id_sal"> Sal.
+            <input type="checkbox" class="checkbox_itens" name="queijo" id="id_queijo"> Queijo.
+            <input type="checkbox" class="checkbox_itens" name="pressunto" id="id_pressunto"> Pressunto.
+            <input type="checkbox" class="checkbox_itens" name="linguica" id="id_linguica"> Linguiça.
+            <input type="checkbox" class="checkbox_itens" name="catupiry" id="id_catupiry"> Catupiry.
+            <input type="checkbox" class="checkbox_itens" name="brigadeiro" id="id_brigadeiro"> Brigadeiro.
+            <input type="checkbox" class="checkbox_itens" name="beijinho" id="id_beijinho"> Beijinho.
+            <input type="checkbox" class="checkbox_itens" name="escarola" id="id_escarola"> Escarola.
+            <input type="checkbox" class="checkbox_itens" name="bacon" id="id_bacon"> Bacon.
+            <input type="checkbox" class="checkbox_itens" name="carne" id="id_carne"> Carne.
+            <input type="checkbox" class="checkbox_itens" name="frango" id="id_frango"> Frango.
+            <input type="checkbox" class="checkbox_itens" name="costela" id="id_costela"> Costela.
+            <input type="checkbox" class="checkbox_itens" name="goiabada" id="id_goiabada"> Goiabada.
+            <input type="checkbox" class="checkbox_itens" name="queijo_minas" id="id_queijo_minas"> Queijo Minas.
+        </fieldset>
     </form>
 
     <!-- O formulário abaixo foi criado para teste, visto que a função onkeyUP, as alterações só funcionam nos campos de SPAM -->
+<!-- Tentativa de ideias ao cliente
     <form action="controle_de_mercadoria_spam" name="controle_de_mercadoria_spam" id="controle_de_mercadoria_spam">
         <fieldset id="form_spam">
             <legend>Controle de Mercadoria.</legend>
@@ -95,7 +102,8 @@
                 </label>
         </fieldset>
     </form>
-
+-->
+<!--  Tentativa de ideias ao cliente
     <form action="valor_produto" name="valor_produto" id="valor_produto">
         <fieldset>
             <legend>Valor do Produto:</legend>
@@ -112,7 +120,7 @@
                     <div id="val_porcao"><span>&#128181;</span></div>
                 </label>
         </fieldset>
-    </form>
+    </form> -->
 
     <script src="js/customizacao.js"></script>
 <!-- 

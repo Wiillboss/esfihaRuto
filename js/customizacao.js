@@ -17,7 +17,7 @@ function registrar_produto(botao){
     const val_ttl_produto = quant_produto * pre_produto;
     
 
-     document.getElementById("ctrl_mercadoria_nome_produto").value = no_produto;
+     document.getElementById("ctrl_mercadoria_nome_produto").innerHTML = no_produto;
      document.getElementById("ctrl_qtdade_estoque").innerHTML = quant_produto;
      document.getElementById("ctrl_vlorTotal_em_estoque").innerHTML = val_ttl_produto;
      document.getElementById("registro_valor_total_produto").innerHTML = val_ttl_produto;
