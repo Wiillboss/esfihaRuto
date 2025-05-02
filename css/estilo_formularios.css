@@ -17,8 +17,8 @@ fieldset{
     padding: 9px;
 }
 
-#quantidade_produto, #preco_produto{
-    width: 60px;
+#kg_produto, #preco_produto{
+    width: 50px;
 }
 
 div{
