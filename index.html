@@ -14,7 +14,7 @@
 
     <h2 id="titulo_da_pagina">Administração de recursos e Lucros.</h2>
 
-    <form action="form_registro_produto" name="form_registro_produto" id="form_registro_produto">
+    <form id="form_registro_produto">
         <fieldset>
             <legend>Entrada de Mercadoria e Valores</legend>
                 <label for=""> Mercado:
@@ -35,7 +35,7 @@
                     <input type="number" name="kg_produto" id="kg_produto" required>
                 </label>
                 <label for=""> Preço:
-                    <input type="number" name="preco_produto" id="preco_produto" placeholder="R$:">
+                    <input type="number" name="preco_produto" id="preco_produto" placeholder="R$:" onkeyup="digita()">
                     <!--A linha abaixo é para ser usada somente quando for usar a função para teste com SPAM                     
                     <input type="number" name="preco_produto" id="preco_produto" placeholder="R$:" onkeyup="re_produto()"> -->
                 </label>
@@ -45,24 +45,22 @@
                 <!-- Abaixo foi comentado para fazer a tentativa de no lugar do INPUT do tipo SUBMIT, usar um botão diretamente. -->
                 <!-- <input type="submit" name="btn_registrar_compra" id="btn_registrar_compra" value="Registrar"> -->
 
-                <button id="btn_registrar_compra" onclick="registrar_produto()">Registrar Mercadoria</button>
+                <button type="button" id="btn_registrar_compra" >Registrar Mercadoria</button>
         </fieldset>
     </form>
 
     <form action="controle_de_mercadoria" name="controle_de_mercadoria" id="controle_de_mercadoria">
         <fieldset id="ctr_mercadoria">
-            <legend>Controle de Mercadoria.</legend>
-                <label for="" > Produto:
+             <legend>Controle de Mercadoria.</legend>
+            <!--<label for="" > Produto:
                     <span id="ctrl_mercadoria_nome_produto">&#128230</span>
-                    <!-- 
-                    <input type="text" name="ctrl_mercadoria_nome_produto" id="ctrl_mercadoria_nome_produto" placeholder="Nome do Produto.">  -->
                 </label>
                 <label for="">Kg. em estoque:
                     <span id="ctrl_qtdade_estoque">&#128230</span>
                 </label>
                 <label for=""> Valor Total em Estoque: R$: 
                     <span id="ctrl_vlorTotal_em_estoque">&#128181;</span>
-                </label>
+                </label> -->
         </fieldset>
         <fieldset id="producao">
             <legend>Produção</legend>

@@ -3,14 +3,15 @@
 
 
 
-const botao = document.querySelector('button');
+ const botao = document.querySelector('#btn_registrar_compra');
 
-botao.addEventListener('click', function(event){
-    event.preventDefault();
+ botao.addEventListener('click', function(){
+    registrar_produto();
 })
 
 
-function registrar_produto(botao){
+
+function registrar_produto1(){
     
     const no_mercado = document.getElementById("nome_mercado").value;
     const no_produto = document.getElementById("nome_produto").value;
@@ -25,11 +26,18 @@ function registrar_produto(botao){
      document.getElementById("ctrl_vlorTotal_em_estoque").innerHTML = val_ttl_produto;
      document.getElementById("registro_valor_total_produto").innerHTML = val_ttl_produto;
 
-   limparCampos();  
+   limparCampos('form_registro_produto');  
 }
 
+var digi = '';
 
-/*
+function digita(){
+
+
+    
+    document.getElementById('registro_valor_total_produto').textContent = digi;
+}
+
 const registros = [];
 
 function registrar_produto(botao){
@@ -38,12 +46,12 @@ function registrar_produto(botao){
     const kg_prodt = document.getElementById("kg_produto").value;
     const pre_produto = document.getElementById("preco_produto").value;
     const val_ttl_produto = kg_prodt * pre_produto;
-    document.getElementById('registro_valor_total_produto').innerHTML = val_ttl_produto;
+    digi = val_ttl_produto;
     if (nome_prodt && kg_prodt && pre_produto){
         registros.push({nome_prodt, kg_prodt, pre_produto});
-        alert("Preenchimento completo."); //teste
+        //  alert("Preenchimento completo."); teste
         atualizarLista();
-        limparCampos();
+        // limparCampos('form_registro_produto');  
                 
     }else{
         alert("Preencha todos os campos.");
@@ -51,6 +59,7 @@ function registrar_produto(botao){
 
 }
 
+/*
 function editar_registro(index){
     const nw_name_merc = prompt("Editar nome do Mercado: ", registros[index].nome_mercado);
     const nw_name_prodt = prompt("Editar nome do Produto: ", registros[index].nome_prodt);
@@ -72,23 +81,51 @@ function excluir_registro(index){
         atualizarLista();
     }
 }
-
+*/
 function atualizarLista(){
-    const lista = document.getElementById('lista-registros');
-    lista.innerHTML = '';
-
+    const lista = document.getElementById('ctr_mercadoria');
+    // lista.innerHTML = '';
+    let cont = 0;
     registros.forEach((r, i) =>{
-        const item = document.createElement()
+        const legend = document.createElement('legend');
+        lista.appendChild(legend);
+        const label = document.createElement('label');
+        const br = document.createElement('br');
+        label.textContent="Nome do produto: ";
+        const span = document.createElement('span');
+        span.innerHTML =`<span id="ctrl_mercadoria_nome_produto">&#128230 ${registros[cont].nome_prodt}</span>`;
+        
+        label.appendChild(span);
+        // label.appendChild(br);
+        lista.appendChild(label);
+        
+        const label1 = document.createElement('label');
+        label1.textContent="Preço do produto: "
+        const span1 = document.createElement('span');
+        span1.innerHTML=`<span id="ctrl_qtdade_estoque">&#128230 ${registros[cont].pre_produto}</span>` ;
+        label1.appendChild(span1);
+        lista.appendChild(label1);
+        lista.appendChild(br);
+        cont = cont + 1;
+
+        // label.appendChild(span);
+        // div.appendChild(label);
+        //         div.classList.add('');
+
     })
 }
-*/
-function limparCampos(){
-    document.getElementById('nome_mercado').value = '';
-    document.getElementById('nome_produto').value = '';
-    document.getElementById('kg_produto').value = '';
-    document.getElementById('preco_produto').value = '';
-    document.getElementById('registro_valor_total_produto').value = '';
 
+
+function limparCampos(a){
+    /* 
+       document.getElementById('nome_mercado').value = '';
+       document.getElementById('nome_produto').value = '';
+       document.getElementById('kg_produto').value = '';
+       document.getElementById('preco_produto').value = '';
+    */   
+    document.getElementById('registro_valor_total_produto').textContent = '';
+    const teste = document.getElementById(a);
+    teste.reset();
 }
 
 
