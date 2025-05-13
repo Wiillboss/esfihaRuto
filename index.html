@@ -35,7 +35,7 @@
                     <input type="number" name="kg_produto" id="kg_produto" required>
                 </label>
                 <label for=""> Preço:
-                    <input type="number" name="preco_produto" id="preco_produto" placeholder="R$:" onkeyup="digita()">
+                    <input type="number" name="preco_produto" id="preco_produto" placeholder="R$:" >
                     <!--A linha abaixo é para ser usada somente quando for usar a função para teste com SPAM                     
                     <input type="number" name="preco_produto" id="preco_produto" placeholder="R$:" onkeyup="re_produto()"> -->
                 </label>
@@ -45,14 +45,17 @@
                 <!-- Abaixo foi comentado para fazer a tentativa de no lugar do INPUT do tipo SUBMIT, usar um botão diretamente. -->
                 <!-- <input type="submit" name="btn_registrar_compra" id="btn_registrar_compra" value="Registrar"> -->
 
-                <button type="button" id="btn_registrar_compra" >Registrar Mercadoria</button>
+                <button type="button" id="btn_registrar_compra" onclick="registrarProduto()" >Registrar Mercadoria</button>
         </fieldset>
     </form>
 
     <form action="controle_de_mercadoria" name="controle_de_mercadoria" id="controle_de_mercadoria">
         <fieldset id="ctr_mercadoria">
              <legend>Controle de Mercadoria.</legend>
-            <!--<label for="" > Produto:
+                <ul id="listaProduos"></ul>
+
+
+             <!--<label for="" > Produto:
                     <span id="ctrl_mercadoria_nome_produto">&#128230</span>
                 </label>
                 <label for="">Kg. em estoque:
