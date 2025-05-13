@@ -177,7 +177,7 @@ function registrarProduto(){
     const precoProduto = parseFloat(InputPrecoProduto.value);
 
     if (nomeMercado && nomeProduto && !isNaN(kgProduto) && !isNaN(precoProduto)){
-        produto.push(nomeMercado);
+        produto.push({nomeMercado, nomeProduto});
         alert(produto.nomeMercado);
         exibirProdutos();
         InputnomeMercado.value = "";
@@ -195,7 +195,7 @@ function exibirProdutos(){
 
     produto.forEach((produto, index) =>{
         const item = document.createElement('li');
-        intem.texContent = `${index + 1}.${produto.nome} - R$ ${produto.preco.toFixed(2)}`;
+        item.texContent = `${index + 1}.${produto.nomeMercado} - ${produto.nomeProduto} - ${produto.kgProduto} - R$ ${produto.precoProduto}`;
         lista.appendChild(item);
     })
 }
