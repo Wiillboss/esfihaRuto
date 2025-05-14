@@ -170,15 +170,26 @@ function registrarProduto(){
     const InputnomeProduto = document.getElementById('nome_produto');
     const InputkgProduto = document.getElementById('kg_produto');
     const InputPrecoProduto = document.getElementById('preco_produto');
-
+    
     const nomeMercado = InputnomeMercado.value.trim();
     const nomeProduto = InputnomeProduto.value.trim();
     const kgProduto = parseFloat(InputkgProduto.value);
     const precoProduto = parseFloat(InputPrecoProduto.value);
+    const val_ttl_produto = kgProduto * precoProduto;
+
+    const novoRegistro = {
+        mercado: nomeMercado,
+        produto: nomeProduto,
+        kg: kgProduto,
+        preco: precoProduto,
+        val_ttl_produto
+    }
 
     if (nomeMercado && nomeProduto && !isNaN(kgProduto) && !isNaN(precoProduto)){
-        produto.push({nomeMercado, nomeProduto});
-        alert(produto.nomeMercado);
+        produto.push(novoRegistro);
+        //alert(novoRegistro.mecado)
+        //alert(produto[0].mecado)
+        //alert(nomeMercado);
         exibirProdutos();
         InputnomeMercado.value = "";
         InputnomeProduto.value = "";
@@ -193,9 +204,16 @@ function exibirProdutos(){
     const lista = document.getElementById('listaProduos');
     lista.innerHTML = "";
 
-    produto.forEach((produto, index) =>{
-        const item = document.createElement('li');
-        item.texContent = `${index + 1}.${produto.nomeMercado} - ${produto.nomeProduto} - ${produto.kgProduto} - R$ ${produto.precoProduto}`;
-        lista.appendChild(item);
-    })
+    // produto.forEach((intemProduto, indice) =>{
+    //     const item = document.createElement('li');
+    //     item.texContent = `${intemProduto}`; 
+    //     //${produto.nomeMercado} - ${produto.nomeProduto} - ${produto.kgProduto} - R$ ${produto.precoProduto}`;
+    //     lista.appendChild(item);
+    // })
+
+    produto.forEach((itemProduto, indice) => {
+    const item = document.createElement('li');
+    item.textContent = `Mercado: ${itemProduto.mercado} - Produto: ${itemProduto.produto} - Qtd. Kg: ${itemProduto.kg} - Valor do kg: R$ ${itemProduto.preco} - Valor total pago R$: ${itemProduto.val_ttl_produto}`;
+    lista.appendChild(item);
+    });
 }

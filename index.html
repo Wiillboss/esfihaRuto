@@ -17,10 +17,10 @@
     <form id="form_registro_produto">
         <fieldset>
             <legend>Entrada de Mercadoria e Valores</legend>
-                <label for=""> Mercado:
+                <label for="nome_mercado"> Mercado:
                     <input type="text" name="nome_mercado" id="nome_mercado" placeholder="Nome do Mercado." required>
                 </label>
-                <label for=""> Produto:
+                <label for="nome_produto"> Produto:
                     <input type="text" name="nome_produto" id="nome_produto" placeholder="Nome do Produto." required>
                 </label>
                 <!-- O conteúdo abaixo é uma ideia que precisa ser melhor desenvolvida.  -->
@@ -31,15 +31,15 @@
                 <label for="">Unidade
                     <input type="radio" name="radio_unidade" id="radio_unidade">
                 </label> -->
-                <label for=""> Kg:
+                <label for="kg_produto"> Kg:
                     <input type="number" name="kg_produto" id="kg_produto" required>
                 </label>
-                <label for=""> Preço:
+                <label for="preco_produto"> Preço:
                     <input type="number" name="preco_produto" id="preco_produto" placeholder="R$:" >
                     <!--A linha abaixo é para ser usada somente quando for usar a função para teste com SPAM                     
                     <input type="number" name="preco_produto" id="preco_produto" placeholder="R$:" onkeyup="re_produto()"> -->
                 </label>
-                <label for=""> Valor Total: R$:
+                <label> Valor Total: R$:
                     <span id="registro_valor_total_produto">&#128181;</span></div>
                 </label>
                 <!-- Abaixo foi comentado para fazer a tentativa de no lugar do INPUT do tipo SUBMIT, usar um botão diretamente. -->
