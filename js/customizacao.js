@@ -204,16 +204,22 @@ function exibirProdutos(){
     const lista = document.getElementById('listaProduos');
     lista.innerHTML = "";
 
+    produto.forEach((itemProduto, indice) => {
+        const item = document.createElement('li');
+        item.textContent =
+            `Mercado: ${itemProduto.mercado} - 
+            Produto: ${itemProduto.produto} - 
+            Qtd. Kg: ${itemProduto.kg} - 
+            Valor do kg: R$ ${itemProduto.preco} - 
+            Valor total pago R$: ${itemProduto.val_ttl_produto}`;
+        lista.appendChild(item);
+    });
+
     // produto.forEach((intemProduto, indice) =>{
     //     const item = document.createElement('li');
     //     item.texContent = `${intemProduto}`; 
     //     //${produto.nomeMercado} - ${produto.nomeProduto} - ${produto.kgProduto} - R$ ${produto.precoProduto}`;
     //     lista.appendChild(item);
     // })
-
-    produto.forEach((itemProduto, indice) => {
-    const item = document.createElement('li');
-    item.textContent = `Mercado: ${itemProduto.mercado} - Produto: ${itemProduto.produto} - Qtd. Kg: ${itemProduto.kg} - Valor do kg: R$ ${itemProduto.preco} - Valor total pago R$: ${itemProduto.val_ttl_produto}`;
-    lista.appendChild(item);
-    });
+    
 }
