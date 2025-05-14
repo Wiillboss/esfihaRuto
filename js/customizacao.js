@@ -190,8 +190,8 @@ function registrarProduto(){
         //alert(novoRegistro.mecado)
         //alert(produto[0].mecado)
         //alert(nomeMercado);
-        // exibirProdutos();
-        adicionarLinha();
+        exibirProdutos();
+        //adicionarLinha();
         InputnomeMercado.value = "";
         InputnomeProduto.value = "";
         InputkgProduto.value = "";

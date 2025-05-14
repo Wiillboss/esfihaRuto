@@ -38,8 +38,14 @@ div{
     color: white;
 }
 
+
+#listaProduos{
+    text-align: center;
+    border: solid 1px black;
+}
+
 #tabela{
-    /* display: none; */
+    display: none;
     width: 98vw;
     border: solid 1px black;
     text-align: center;
