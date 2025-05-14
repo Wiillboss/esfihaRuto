@@ -37,3 +37,10 @@ div{
     background-color: rgb(3, 109, 109);
     color: white;
 }
+
+#tabela{
+    /* display: none; */
+    width: 98vw;
+    border: solid 1px black;
+    text-align: center;
+}

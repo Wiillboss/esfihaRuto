@@ -46,6 +46,7 @@
                 <!-- <input type="submit" name="btn_registrar_compra" id="btn_registrar_compra" value="Registrar"> -->
 
                 <button type="button" id="btn_registrar_compra" onclick="registrarProduto()" >Registrar Mercadoria</button>
+                <!-- <button type="button" id="btn_registrar_compra_tabela" onclick="registrarProdutoTabela()" >Registrar Mercadoria</button> -->
         </fieldset>
     </form>
 
@@ -53,7 +54,20 @@
         <fieldset id="ctr_mercadoria">
              <legend>Controle de Mercadoria.</legend>
                 <ul id="listaProduos"></ul>
-
+                <table id="tabela">
+                    <thead>
+                        <tr>
+                            <th>Mercado</th>
+                            <th>Produto</th>
+                            <th>Kg</th>
+                            <th>Preço</th>
+                            <th>Valor Total</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                    </tbody>
+                </table>
 
              <!--<label for="" > Produto:
                     <span id="ctrl_mercadoria_nome_produto">&#128230</span>

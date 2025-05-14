@@ -190,7 +190,8 @@ function registrarProduto(){
         //alert(novoRegistro.mecado)
         //alert(produto[0].mecado)
         //alert(nomeMercado);
-        exibirProdutos();
+        // exibirProdutos();
+        adicionarLinha();
         InputnomeMercado.value = "";
         InputnomeProduto.value = "";
         InputkgProduto.value = "";
@@ -198,6 +199,26 @@ function registrarProduto(){
     }else{
         alert('Preencha todos os campos corretamente!');
     }
+
+    
+}
+
+function adicionarLinha(mercado, produto, kg, preco, val_ttl_produto){
+    const tabela = document.getElementById("tabela").getElementsByTagName("tbody")[0];
+    const novaLinha = tabela.insertRow();
+    
+    const celula1 = novaLinha.insertCell(1);
+    const celula2 = novaLinha.insertCell(2);
+    const celula3 = novaLinha.insertCell(3);
+    const celula4 = novaLinha.insertCell(4);
+    const celula5 = novaLinha.insertCell(5);
+
+    celula1.innerText = mercado;
+    celula2.innerText = produto;
+    celula3.innerText = kg;
+    celula4.innerText = preco;
+    celula5.innerText = val_ttl_produto;
+
 }
 
 function exibirProdutos(){
