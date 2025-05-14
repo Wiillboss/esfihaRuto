@@ -203,7 +203,7 @@ function registrarProduto(){
 function exibirProdutos(){
     const lista = document.getElementById('listaProduos');
     lista.innerHTML = "";
-
+    //Abaixo foi comentado para fazer testes
     produto.forEach((itemProduto, indice) => {
         const item = document.createElement('li');
         item.textContent =
@@ -214,6 +214,22 @@ function exibirProdutos(){
             Valor total pago R$: ${itemProduto.val_ttl_produto}`;
         lista.appendChild(item);
     });
+    
+   
+    /*
+    produto.forEach((itemProduto, indice) => {
+        //const label = document.createElement('label');
+        const item = document.createElement('li');
+        const label = document.createElement('legend');
+        item.textContent.label =
+            `Mercado: ${itemProduto.mercado}`;
+        lista.appendChild(item, label);
+        const item2 = document.createElement('li');
+        item2.textContent.label =
+            `Produto: ${itemProduto.produto}`;
+        lista.appendChild(item2, label);
+    });    
+    */
 
     // produto.forEach((intemProduto, indice) =>{
     //     const item = document.createElement('li');
