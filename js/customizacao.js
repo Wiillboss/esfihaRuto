@@ -235,7 +235,47 @@ function exibirProdutos(){
             Valor total pago R$: ${itemProduto.val_ttl_produto}`;
         lista.appendChild(item);
     });
-    
+
+    // Abaixo foi feita uma nova tentativa de separar os valores do obj
+    const listaDiv= document.getElementById('dvPai');
+    listaDiv.innerHTML = "";
+    produto.forEach((Iproduto,ind) => {
+        const i1 = getElementById('dv1');
+        i1.textContent = `Mercado: ${Iproduto.mercado}`;
+        listaDiv.appendChild(i1);
+        
+        const i2 = getElementById('dv2');
+        i2.textContent = `Produto: ${Iproduto.produto}`;
+        listaDiv.appendChild(i2);
+        
+        const i3 = getElementById('dv3');
+        i3.textContent = `Qtd. Kg: ${Iproduto.kg}`;
+        listaDiv.appendChild(i3);
+        
+        const i4 = getElementById('dv4');
+        i4.textContent = `Valor do Kg: R$ ${Iproduto.preco}`;
+        listaDiv.appendChild(i4);
+        
+        const i5 = getElementById('dv5');
+        i5.textContent = `Valor total pago: R$ ${Iproduto.val_ttl_produto}`;
+        listaDiv.appendChild(i5);
+    });
+
+    /*
+    const lista = document.getElementById('listaProduos');
+    lista.innerHTML = "";
+    //Abaixo foi comentado para fazer testes
+    produto.forEach((itemProduto, indice) => {
+        const item = document.createElement('li');
+        item.textContent =
+            `Mercado: ${itemProduto.mercado} - 
+            Produto: ${itemProduto.produto} - 
+            Qtd. Kg: ${itemProduto.kg} - 
+            Valor do kg: R$ ${itemProduto.preco} - 
+            Valor total pago R$: ${itemProduto.val_ttl_produto}`;
+        lista.appendChild(item);
+    });
+    */
    
     /*
     produto.forEach((itemProduto, indice) => {
