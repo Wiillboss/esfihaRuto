@@ -163,7 +163,7 @@ function re_produto(){
 }
 */
 
-const produto = [] //O array
+const lista_de_mercadorias = [] //O array
 
 function registrarProduto(){
     const InputnomeMercado = document.getElementById('nome_mercado');
@@ -186,12 +186,12 @@ function registrarProduto(){
     }
 
     if (nomeMercado && nomeProduto && !isNaN(kgProduto) && !isNaN(precoProduto)){
-        produto.push(novoRegistro);
+        lista_de_mercadorias.push(novoRegistro);
         //alert(novoRegistro.mecado)
         //alert(produto[0].mecado)
         //alert(nomeMercado);
-        exibirProdutos();
         //adicionarLinha();
+        exibirProdutos();
         InputnomeMercado.value = "";
         InputnomeProduto.value = "";
         InputkgProduto.value = "";
@@ -225,8 +225,16 @@ function exibirProdutos(){
     const lista = document.getElementById('listaProduos');
     lista.innerHTML = "";
     //Abaixo foi comentado para fazer testes
-    produto.forEach((itemProduto, indice) => {
+    lista_de_mercadorias.forEach((itemProduto, indice) => {
         const item = document.createElement('li');
+
+    // adicionar estilos: de acordo com o chat e não funcionou
+    /*item.style.margin = "12px 0";
+    item.style.padding = "10px";
+    item.style.backgroundColor = "#f5f5f5";
+    item.style.borderRadius = "6px";
+    item.style.border = "1px solid #ddd";*/    
+        
         item.textContent =
             `Mercado: ${itemProduto.mercado} - 
             Produto: ${itemProduto.produto} - 
@@ -239,7 +247,7 @@ function exibirProdutos(){
     // Abaixo foi feita uma nova tentativa de separar os valores do obj
     const listaDiv= document.getElementById('dvPai');
     listaDiv.innerHTML = "";
-    produto.forEach((Iproduto,ind) => {
+    lista_de_mercadorias.forEach((Iproduto,ind) => {
         const i1 = getElementById('dv1');
         i1.textContent = `Mercado: ${Iproduto.mercado}`;
         listaDiv.appendChild(i1);
