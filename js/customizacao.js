@@ -241,6 +241,7 @@ function exibirProdutos(){
         const item1 = document.createElement('li');
         const item2 = document.createElement('li');
         const item3 = document.createElement('li');
+        const item4 = document.createElement('li');
         const item5 = document.createElement('li');
 
         item1.textContent =
