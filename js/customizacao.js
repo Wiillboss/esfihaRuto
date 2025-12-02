@@ -226,15 +226,9 @@ function exibirProdutos(){
     lista.innerHTML = "";
     //Abaixo foi comentado para fazer testes
     lista_de_mercadorias.forEach((itemProduto, indice) => {
-        const item = document.createElement('li');
-
-    // adicionar estilos: de acordo com o chat e não funcionou
-    /*item.style.margin = "12px 0";
-    item.style.padding = "10px";
-    item.style.backgroundColor = "#f5f5f5";
-    item.style.borderRadius = "6px";
-    item.style.border = "1px solid #ddd";*/    
         
+        /*const item = document.createElement('li');*/
+        /*
         item.textContent =
             `Mercado: ${itemProduto.mercado} - 
             Produto: ${itemProduto.produto} - 
@@ -242,6 +236,36 @@ function exibirProdutos(){
             Valor do kg: R$ ${itemProduto.preco} - 
             Valor total pago R$: ${itemProduto.val_ttl_produto}`;
         lista.appendChild(item);
+        */
+
+        const item1 = document.createElement('li');
+        const item2 = document.createElement('li');
+        const item3 = document.createElement('li');
+        const item5 = document.createElement('li');
+
+        item1.textContent =
+            `Mercado: ${itemProduto.mercado}`;
+        lista.appendChild(item1);
+        item2.textContent =
+            `Produto: ${itemProduto.produto}`;
+        lista.appendChild(item2);
+        item3.textContent =
+            `Qtd. Kg: ${itemProduto.kg}`;
+        lista.appendChild(item3);
+        item4.textContent =
+            `Valor do kg: R$ ${itemProduto.preco}`;
+        lista.appendChild(item4);
+        item5.textContent =
+            `Valor total pago R$: ${itemProduto.val_ttl_produto}`;
+        lista.appendChild(item5);
+
+    // adicionar estilos: de acordo com o chat e não funcionou
+    /*item.style.margin = "12px 0";
+    item.style.padding = "10px";
+    item.style.backgroundColor = "#f5f5f5";
+    item.style.borderRadius = "6px";
+    item.style.border = "1px solid #ddd";*/    
+
     });
 
     // Abaixo foi feita uma nova tentativa de separar os valores do obj
